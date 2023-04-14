@@ -64,7 +64,7 @@ var password = 'notastrongpassword';
 let isPasswordValid = password.length >= 5;
 let doesNotContainUsername = !password.includes(username);
 let usernameBeLessThan20 = username.length <= 20;
-let isWhiteSpaceFree = username.trim() ===username && password.trim();
+let isWhiteSpaceFree = username.trim() === username && password.trim() === password;
 
 
 
