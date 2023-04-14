@@ -1,1 +1,70 @@
-console.log('what up?');
+"use strict"
+console.log("Hello from external JS");
+alert("Welcome to my website");
+var userInput = prompt('What is your fav color:');
+console.log('Great! My fav color is: ' + userInput + ' too!');
+
+let userInputTwo = prompt('How old are you');
+console.log('wow ' + userInputTwo + ' is old');
+
+let userInputLm = parseInt(prompt('How many days would you liek to rent the little mermaid'));
+console.log('You are renting The little mermaid for ' + userInputLm + ' days');
+
+let userInputBb = parseInt(prompt("How many days would you like to rent the Brother Bear?"));
+console.log('You are renting Brother Bear for ' + userInputBb + ' days');
+
+let userInputHer = parseInt(prompt("How many days would you like to rent Hercules?"));
+console.log('You are renting Herculus for ' + userInputHer + ' days');
+
+alert(userInputLm + userInputBb + userInputHer);
+
+
+
+let googlePay = parseInt(prompt('Google is paying me:'));
+console.log('Google is paying me: ' + googlePay);
+let googleDays = parseInt(prompt('I worked for Google for how many days?'));
+console.log('I worked for Google for ' + googleDays + ' days.');
+
+let amazonPay = parseInt(prompt('Amazon is paying me:'));
+console.log('Amazon is paying me: ' + amazonPay);
+let amazonDays = parseInt(prompt('I worked for Amazon for how many days?'));
+console.log('I worked for Amazon for ' + amazonDays + ' days.');
+
+let fbPay = parseInt(prompt('Facebook is paying me:'));
+console.log('Facebook is paying me: ' + fbPay);
+let fbDays = parseInt(prompt('I worked for Facebook for how many days?'));
+console.log('I worked for Facebook for ' + fbDays + ' days.');
+
+let totalPay = (googlePay * googleDays) + (amazonPay * amazonDays) + (fbPay * fbDays);
+
+alert('You made a total of $' + totalPay + ' from Google, Amazon, and Facebook.');
+
+
+let classFull = confirm('Does this class have an available seat? ')
+let noConflict = confirm('Do you have a conflict?');
+if (!classFull && !noConflict) {
+    console.log("Student can enroll");
+} else {
+    console.log('cannot enter')
+}
+
+let itemsBought = 3;
+let offerExpired = false
+let isPremium = true;
+
+if ((itemsBought > 2 || isPremium) && !offerExpired) {
+    console.log("Prduct offer applied");
+} else {
+    console.log("can't apply");
+}
+
+var username = 'codeup';
+var password = 'notastrongpassword';
+
+let isPasswordValid = password.length >= 5;
+let doesNotContainUsername = !password.includes(username);
+let usernameBeLessThan20 = username.length <= 20;
+let isWhiteSpaceFree = username.trim() ===username && password.trim();
+
+
+
