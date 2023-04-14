@@ -2,7 +2,7 @@
 console.log("Hello from external JS");
 alert("Welcome to my website");
 var userInput = prompt('What is your fav color:');
-console.log('Great! My fav color is: ' + userInput + ' too!');
+alert('Great! My fav color is: ' + userInput + ' too!');
 
 let userInputTwo = prompt('How old are you');
 console.log('wow ' + userInputTwo + ' is old');
