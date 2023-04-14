@@ -21,7 +21,8 @@ let totalCost = userInputLm + userInputBb + userInputHer * costPerMovies
 
 alert("Your cost for these rentals is: " + totalCost);
 
-
+// def used days instead of hours :/
+// Needlessly console.logged a bunch of things.
 
 let googlePay = parseInt(prompt('Google is paying me:'));
 console.log('Google is paying me: ' + googlePay);
@@ -56,9 +57,9 @@ let offerExpired = confirm('is offer expired? ')
 let isPremium = confirm('Are you a premium member? ');
 
 if ((itemsBought > 2 || isPremium) && !offerExpired) {
-    console.log("Product offer applied");
+    alert("Product offer applied");
 } else {
-    console.log("can't apply");
+    alert("can't apply");
 }
 
 var username = 'codeup';
