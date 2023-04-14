@@ -41,19 +41,19 @@ alert('You made a total of $' + totalPay + ' from Google, Amazon, and Facebook.'
 
 
 let classFull = confirm('Does this class have an available seat? ')
-let noConflict = confirm('Do you have a conflict?');
+let noConflict = confirm('Are you sure you can attend this class?');
 if (!classFull && !noConflict) {
     console.log("Student can enroll");
 } else {
     console.log('cannot enter')
 }
 
-let itemsBought = 3;
-let offerExpired = false
-let isPremium = true;
+let itemsBought = parseInt(prompt('How many items did you buy? '));
+let offerExpired = confirm('is offer expired? ')
+let isPremium = confirm('Are you a premium member? ');
 
 if ((itemsBought > 2 || isPremium) && !offerExpired) {
-    console.log("Prduct offer applied");
+    console.log("Product offer applied");
 } else {
     console.log("can't apply");
 }
