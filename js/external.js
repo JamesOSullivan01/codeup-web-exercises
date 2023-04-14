@@ -7,16 +7,19 @@ alert('Great! My fav color is: ' + userInput + ' too!');
 let userInputTwo = prompt('How old are you');
 console.log('wow ' + userInputTwo + ' is old');
 
-let userInputLm = parseInt(prompt('How many days would you liek to rent the little mermaid'));
-console.log('You are renting The little mermaid for ' + userInputLm + ' days');
+let userInputLm = parseInt(prompt('How many days would you like to rent the little mermaid'));
+alert('You are renting The little mermaid for ' + userInputLm + ' days');
 
 let userInputBb = parseInt(prompt("How many days would you like to rent the Brother Bear?"));
-console.log('You are renting Brother Bear for ' + userInputBb + ' days');
+alert('You are renting Brother Bear for ' + userInputBb + ' days');
 
 let userInputHer = parseInt(prompt("How many days would you like to rent Hercules?"));
-console.log('You are renting Herculus for ' + userInputHer + ' days');
+alert('You are renting Herculus for ' + userInputHer + ' days');
 
-alert(userInputLm + userInputBb + userInputHer);
+let costPerMovies = 3;
+let totalCost = userInputLm + userInputBb + userInputHer * costPerMovies
+
+alert("Your cost for these rentals is: " + totalCost);
 
 
 
