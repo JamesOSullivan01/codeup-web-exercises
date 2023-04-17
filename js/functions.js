@@ -9,7 +9,7 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 function sayHello(name) {
-    console.log("Hello, " + name + "!");
+    return ("Hello, " + name + "!");
 }
 sayHello("CodeUp");
 
@@ -21,13 +21,18 @@ sayHello("CodeUp");
  *
  * console.log 'helloMessage' to check your work
  */
-sayHello("Jimmy");
+
+let helloMessage = sayHello("Jimmy")
+console.log(helloMessage);
 /**
  * TODO:
  * Store your name as a string in a variable named 'myName', and pass that
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
+
+let myName = "jimmy";
+console.log(sayHello(myName));
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -50,15 +55,14 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-function isTwo() {
-    if (random === 2) {
-        console.log("true");
+function isTwo(num) {
+    if (num === 2) {
+        return(true);
     } else {
-        console.log("false");
+        return(false);
     }
 }
-isTwo();
-
+console.log(isTwo(random));
 
 /**
  * TODO:
@@ -99,7 +103,7 @@ console.log(calculateTip(0.08, 100.00));
  * then display the dollar amount they should tip
  */
 let totalBill = parseFloat(prompt("Your total came out to be:"))
-let tipPercentage = parseFloat(prompt("What percent would you like to leave for a tip (as a decimal)?"))
+let tipPercentage = parseFloat(prompt("What percgitent would you like to leave for a tip (as a decimal)?"))
 let tipAmount = (tipPercentage * totalBill);
 
 alert("you should tip $" + tipAmount);
@@ -120,6 +124,6 @@ alert("you should tip $" + tipAmount);
 
 
 function applyDiscount(originalPrice, discountPercent) {
-    console.log(originalPrice - (originalPrice * discountPercent));
+    return (originalPrice - (originalPrice * discountPercent));
 }
-applyDiscount(45.99, 0.12);
+alert(applyDiscount(45.99, 0.12));
