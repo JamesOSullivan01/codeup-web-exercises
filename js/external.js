@@ -74,6 +74,6 @@
 
 
 
-function filterEventElements(numbers {
+function filterEventElements(numbers){
 
-})
+}
