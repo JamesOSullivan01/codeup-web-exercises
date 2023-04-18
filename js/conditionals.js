@@ -22,6 +22,7 @@
  * console.logging the function's return value
  */
 
+
 // function analyzeColor(color) {
 //     if(color === "blue") {
 //         return "The sky is blue";
@@ -63,14 +64,12 @@ function analyzeColor(color) {
     switch (color) {
         case "blue":
             return "the sky is blue";
-            break;
         case "red":
             return "Strawberries are red";
         case "yellow":
             return "Bananas are yellow";
         default:
             return "I don't know anything about " + color;
-            break;
     }
 }
 
@@ -83,21 +82,7 @@ console.log(analyzeColor(randomColor));
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-let userInput = prompt("What is your favorite color");
-function analyzeColor(color) {
-    switch (color) {
-        case "blue":
-            return "the sky is blue";
-            break;
-        case "red":
-            return "Strawberries are red";
-        case "yellow":
-            return "Bananas are yellow";
-        default:
-            return "I don't know anything about " + color;
-            break;
-    }
-}
+let userInput = prompt("What is your favorite color?");
 
 alert(analyzeColor(userInput));
 
@@ -157,7 +142,7 @@ console.log(calculateTotal(2, 100));
 var luckyNumber = Math.floor(Math.random() * 6);
 let userInput2 = prompt("what is your total bill?")
 
-alert("your lucky number is, " + luckyNumber + "Your price before the discount was " + userInput2 + " Your price after the discount is " + calculateTotal(luckyNumber, userInput2));
+alert("your lucky number is: " + luckyNumber + ", Your price before the discount was $" + userInput2 + ", Your price after the discount is " + calculateTotal(luckyNumber, userInput2));
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -176,25 +161,28 @@ alert("your lucky number is, " + luckyNumber + "Your price before the discount w
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-let confirmResponse = confirm("Would you like to enter a number?");
-if(confirmResponse) {
-    let userNumber = prompt("What number would you like to enter?");
-    if (!isNaN(parseInt(userNumber))) {
-        if (userNumber % 2 == 0) {
-            alert("This number is even");
+function numberInfo() {
+    let confirmResponse = confirm("Would you like to enter a number?");
+    if (confirmResponse) {
+        let userNumber = prompt("What number would you like to enter?");
+        if (!isNaN(parseInt(userNumber))) {
+            if (userNumber % 2 == 0) {
+                alert("This number is even");
+            } else {
+                alert("This number is odd");
+            }
+            alert("your number was " + userNumber + " it is now " + (parseInt(userNumber) + 100));
+            if (userNumber >= 0) {
+                alert("Your number is positive");
+            } else {
+                alert("This number is negative");
+            }
         } else {
-            alert("this number is odd");
+            alert("You entered the wrong data type");
         }
-        alert("your number was" + userNumber + " it is now" + (parseInt(userNumber) + 100));
-        if (userNumber >= 0) {
-            alert("your number is positive");
-        } else {
-            alert("this number is negative");
-        }
-    } else {
-        alert("You entered the wrong data type");
     }
 }
+numberInfo();
 
 
 
