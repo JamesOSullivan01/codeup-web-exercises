@@ -9,13 +9,14 @@ function showMultiplicationTable() {
 
 showMultiplicationTable();
 
-
+// randomNumber will generate a new number everytime iteration because it is INSIDE the loop.
+// otherwise if it were outside it would only generate once
 for (let i = 10; i > 0; i--) {
     let randomNumber = Math.floor(Math.random() * (200 - 20 + 1)) + 20;
     if (randomNumber % 2 === 0) {
-        console.log(randomNumber + "is even");
+        console.log(randomNumber + " is even");
     } else {
-        console.log(randomNumber + "is odd");
+        console.log(randomNumber + " is odd");
     }
 }
 // https://www.tutorialstonight.com/number-pattern-programs-in-javascript
