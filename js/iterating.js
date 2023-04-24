@@ -37,7 +37,7 @@ console.log(names.length);
      */
     names.forEach(function(name) {
         console.log((name));
-    })
+    });
     /**
      * TODO:
      * Create the following three functions, each will accept an array and
@@ -51,7 +51,7 @@ console.log(names.length);
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
-let myNumbers = [1,2,3,4,5];
+let myNumbers = [1,2,3,4,5,6,7,8];
 
 function first () {
     return myNumbers[0]
@@ -67,7 +67,7 @@ function first () {
 
 
     function last () {
-        return myNumbers[4]
+        return myNumbers[myNumbers.length - 1];
     }
 
     console.log(last());
