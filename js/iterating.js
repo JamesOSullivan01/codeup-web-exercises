@@ -6,30 +6,38 @@
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */
+let names = ['Matthew', 'Mark', 'Luke', 'John'];
 
-    /**
+/**
      * TODO:
      * Create a log statement that will log the number of elements in the names
      * array.
      */
-
+console.log(names.length);
     /**
      * TODO:
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
-
+    console.log(names.indexOf("Matthew"));
+    console.log(names.indexOf("Mark"));
+    console.log(names.indexOf("Luke"));
+    console.log(names.indexOf("John"));
     /**
      * TODO:
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
-
+    for (let i = 0; i < names.length; i++) {
+        console.log(names[i]);
+    }
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
-
+    names.forEach(function(name) {
+        console.log((name));
+    })
     /**
      * TODO:
      * Create the following three functions, each will accept an array and
@@ -46,34 +54,34 @@
 
 
 
-// declaring an array
-let emptyArr = [];
-
-let cheeses = ['Cheddar', 'String', 'Wensleydale']; // this array contains 3 elements
-
-    console.log(cheeses[1]); // This prints the second element in our array
-    console.log(cheeses.indexOf("Cheddar")); // This will print 0
-    console.log(cheeses[0].indexOf("brie")); // This will print -1
-    console.log(cheeses.indexOf("White Cheddar")); // This  will also print -1
-    console.log(cheeses.length) // prints the number 3
-
-
-    // let's create a loop to print all of our cheese to the console.
-
-    for (let i = 0; i < cheeses.length; i++) {
-        console.log(cheeses[i]); //prints out the cheeses of the array in order
-    }
-
-
-    //for-Each Loop
-
-    cheeses.forEach(function(cheese) {
-        console.log(cheese);
-    })
-
-    cheeses.forEach(function(cheese, index) {
-        console.log(`${index}: ${cheese}`);
-    })
+// // declaring an array
+// let emptyArr = [];
+//
+// let cheeses = ['Cheddar', 'String', 'Wensleydale']; // this array contains 3 elements
+//
+//     console.log(cheeses[1]); // This prints the second element in our array
+//     console.log(cheeses.indexOf("Cheddar")); // This will print 0
+//     console.log(cheeses[0].indexOf("brie")); // This will print -1
+//     console.log(cheeses.indexOf("White Cheddar")); // This  will also print -1
+//     console.log(cheeses.length) // prints the number 3
+//
+//
+//     // let's create a loop to print all of our cheese to the console.
+//
+//     for (let i = 0; i < cheeses.length; i++) {
+//         console.log(cheeses[i]); //prints out the cheeses of the array in order
+//     }
+//
+//
+//     //for-Each Loop
+//
+//     cheeses.forEach(function(cheese) {
+//         console.log(cheese);
+//     })
+//
+//     cheeses.forEach(function(cheese, index) {
+//         console.log(`${index}: ${cheese}`);
+//     })
 
 
 
