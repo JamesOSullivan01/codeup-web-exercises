@@ -51,7 +51,29 @@ console.log(names.length);
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
+let myNumbers = [1,2,3,4,5];
 
+function first () {
+    return myNumbers[0]
+}
+
+    console.log(first());
+
+    function second () {
+        return myNumbers[1]
+    }
+
+    console.log(second());
+
+
+    function last () {
+        return myNumbers[4]
+    }
+
+    console.log(last());
+// myNumbers.forEach(function(num, index) {
+//     console.log(`${index}: ${num}`)
+// })
 
 
 // // declaring an array
