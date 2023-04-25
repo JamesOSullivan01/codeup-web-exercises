@@ -18,7 +18,7 @@ planetsArray = planetsString.split("|")
      // * Create a string with <br> tags between each planet. console.log() your
      // * results. Why might this be useful?
 
-     let breakString = "Mercury<br>Venus<br>Earth<br>Mars<br>Jupiter<br>Saturn<br>Uranus<br>Neptune";
+     let breakString = planetsArray.join("<br>")
     console.log(breakString);
 
     // *
