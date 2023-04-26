@@ -94,51 +94,51 @@
 // let books = [
 //         {title: "Don Quixote", author: {firstName: 'Miguel', LastName: 'De Cervantes'}},
 //         {title: "A Tale Of Two Cities", author: {firstName: 'Charles', LastName: 'Dickens'}},
-//         {title: "The Lord of the Rings", author: {firstName: 'J.R.R.', LastName: 'Tolkien'}},
+//         {title: "The Lord of the Rings", author: {firstName: 'J.R.R.', LastName: 'Tolkien'}},i
 //         {title: "The Little Princess", author: {firstName: 'Antonie', LastName: 'De Saint-Exupery'}},
 //         {title: "Harry Potter and the Sorcerer's Stone", author: {firstName: 'J.K.', LastName: 'Rowling'}}
 //     ]
 
 // This is the industry standard formatting, USE THIS!
-//     let books = [
-//         {
-//             title: "Don Quixote",
-//             author: {
-//                 firstName: 'Miguel',
-//                 lastName: 'De Cervantes'
-//             }
-//         },
-//         {
-//             title: "A Tale Of Two Cities",
-//             author: {
-//                 firstName: 'Charles',
-//                 lastName: 'Dickens'
-//             }
-//         },
-//         {
-//             title: "The Lord of the Rings",
-//             author: {
-//                 firstName: 'J.R.R.',
-//                 lastName: 'Tolkien'
-//             }
-//         },
-//         {
-//             title: "The Little Princess",
-//             author: {
-//                 firstName: 'Antonie',
-//                 lastName: 'De Saint-Exupery'
-//             }
-//         },
-//         {
-//             title: "Harry Potter and the Sorcerer's Stone",
-//             author: {
-//                 firstName: 'J.K.',
-//                 lastName: 'Rowling'
-//             }
-//         }
-//     ]
-//     console.log(books[2].title);
-//     console.log(books[2].author);
+    let books = [
+        {
+            title: "Don Quixote",
+            author: {
+                firstName: 'Miguel',
+                lastName: 'De Cervantes'
+            }
+        },
+        {
+            title: "A Tale Of Two Cities",
+            author: {
+                firstName: 'Charles',
+                lastName: 'Dickens'
+            }
+        },
+        {
+            title: "The Lord of the Rings",
+            author: {
+                firstName: 'J.R.R.',
+                lastName: 'Tolkien'
+            }
+        },
+        {
+            title: "The Little Princess",
+            author: {
+                firstName: 'Antonie',
+                lastName: 'De Saint-Exupery'
+            }
+        },
+        {
+            title: "Harry Potter and the Sorcerer's Stone",
+            author: {
+                firstName: 'J.K.',
+                lastName: 'Rowling'
+            }
+        }
+    ]
+    console.log(books[2].title);
+    console.log(books[2].author);
 
     /**
      * TODO:
@@ -164,9 +164,9 @@
      *      ---
      *      ...
      */
-    // books.forEach(function (book, index) {
-    //     console.log("book # " + (index + 1) + "\n" + book.title + "\n" + book.author.firstName + " " + book.author.lastName);
-    // })
+    books.forEach(function (book, index) {
+        console.log("book # " + (index + 1) + "\n" + book.title + "\n" + book.author.firstName + " " + book.author.lastName);
+    })
 
 
     /**
