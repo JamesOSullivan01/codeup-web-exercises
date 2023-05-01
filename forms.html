@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register With Us</title>
+    <style>
+        h3 {
+            color: dodgerblue;
+            font-size: 20px;
+        }
+      body {
+        background-color: bisque;
+          margin: 40px;
+        }
+      label {
+          color: black;
+      }
+        img{
+            float: right;
+            margin-left: 20px;
+            margin-right: 550px;
+        }
+    </style>
+</head>
+<body>
+<H1>Fill out the form below to complete your registration.</H1>
+<hr>
+    <form method="post" action="https://request-inspector.glitch.me/">
+        <label for="email">E-mail:</label>
+        <input type="text" name="email" id="email" placeholder="Enter your E-mail">
+        <br>
+        <br>
+        <label for="password">Password:</label>
+        <input type="text" name="password" id="password" placeholder="Enter your password">
+        <img src="img/pexels-flo-dahm-699459 (1).jpg" height="315" width="300"/>
+        <br>
+        <br>
+        <h3>Please enter a short biography.</h3>
+        <label for="bio">Your Bio:</label>
+        <br>
+        <br>
+        <textarea name="bio" id="bio" cols="30" rows="6" placeholder="Tell us a little about yourself."></textarea>
+        <h3>How did you hear about us?</h3>
+        <p>Select Multiple:</p>
+        <input type="radio" id="billboard" name="referral-question1" value="radio"> <label for="billboard">Billboard</label>
+        <input type="radio" id="radio-ad" name="referral-question2" value="radio"> <label for="radio-ad">Radio Advertisement</label>
+        <input type="radio" id="internet-ad" name="referral-question3" value="radio"> <label for="internet-ad">Internet Advertisement</label>
+        <input type="radio" id="other" name="referral-question4" value="radio"> <label for="other">Other</label>
+        <input type="text" name="other-box" id="other-box" placeholder="How did you hear about us?">
+        <br>
+        <h3>What web browser are you using?</h3>
+        <label for="web-browser">Browser</label>
+        <select name="web-browser" id="web-browser">
+            <option value="chrome">Chrome</option>
+            <option value="mozilla">Mozilla Firefox</option>
+            <option value="safari">Safari</option>
+        </select>
+        <br>
+        <button type="submit">Submit</button>
+
+    </form>
+</body>
+</html>
