@@ -29,3 +29,39 @@ let numberToFactor = 200;
     }
 
 console.log(findFactors(numberToFactor));
+
+// Write a function that takes in a string and counts the instances of the letter 'e' within the argument. The count should be case insensitive. If the string does not contain any 'e's it should return 0. If the argument is not a string it should return false.
+
+// function countEs(input) {
+//     if (typeof input !== 'string') {
+//         return false
+//     }
+//     let numberOfEs = 0
+//     for (let i = 0; i <= input.length; i++) {
+//             if (input[i].toLowerCase() === 'e')
+//                 numberOfEs++
+//     }
+//     return numberOfEs
+// }
+//
+// console.log(countEs("Ease")); // returns 2;
+// console.log(countEs("teleconference")); // returns 5;
+// console.log(countEs("TOM")); // returns 0;
+// console.log(countEs(true)); // returns false;
+// console.log(countEs(['e', 'E'])); // returns false;
+// console.log(countEs()); // returns false;
+
+// Davids solution
+function countEs(str) {
+    if (typeof str === 'string') {
+        let count = 0;
+        let normalizeStr = str.toLowerCase();
+        for (let i = 0; i <= str.length; i++) {
+            if (normalizeStr.charAt(i) === 'e') {
+                count++;
+            }
+        }
+        return count;
+    } else {
+    return false}
+}
