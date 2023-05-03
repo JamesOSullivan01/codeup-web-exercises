@@ -52,16 +52,40 @@ console.log(findFactors(numberToFactor));
 // console.log(countEs()); // returns false;
 
 // Davids solution
-function countEs(str) {
-    if (typeof str === 'string') {
-        let count = 0;
-        let normalizeStr = str.toLowerCase();
-        for (let i = 0; i <= str.length; i++) {
-            if (normalizeStr.charAt(i) === 'e') {
-                count++;
-            }
+// function countEs(str) {
+//     if (typeof str === 'string') {
+//         let count = 0;
+//         let normalizeStr = str.toLowerCase();
+//         for (let i = 0; i <= str.length; i++) {
+//             if (normalizeStr.charAt(i) === 'e') {
+//                 count++;
+//             }
+//         }
+//         return count;
+//     } else {
+//     return false}
+// }
+//Write a function that takes in a string and returns true if the argument contains at least one instance of the letter ‘e’. This should be case-insensitive. If the argument is not a string, or if the argument does not contain ‘e’ it should return false.
+
+function areThereEs(str) {
+    if (typeof str !== 'string') {
+        return false;
+    }
+
+    let normalizeString = str.toLowerCase();
+    for (let i = 0; i < normalizeString.length; i++) {
+        if (normalizeString.charAt(i) === 'e') {
+            return true;
         }
-        return count;
-    } else {
-    return false}
+    }
+
+    return false;
 }
+
+console.log(areThereEs("Ease")); // returns 2;
+console.log(areThereEs("teleconference")); // returns 5;
+console.log(areThereEs("TOM")); // returns 0;
+console.log(areThereEs(true)); // returns false;
+console.log(areThereEs(['e', 'E'])); // returns false;
+console.log(areThereEs()); // returns false;
+

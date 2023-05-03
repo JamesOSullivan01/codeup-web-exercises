@@ -1,4 +1,58 @@
 .fancy-header {
-    color: purple; /* single line comment */
+    color: #F6885C; /* single line comment */
     text-decoration: underline;
+    text-align: center;
+    font-size: 6em;
+}
+
+.intro {
+    color: #d8dee4;
+    font-size: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #F8FAF9;
+    text-decoration: underline;
+}
+
+body {
+    background-image: url("../img/windTech.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+p, li, ui{
+    color: #d8dee4;
+}
+
+.unordered {
+    list-style: square ;
+}
+
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+    float: left;
+}
+
+table, th, td {
+    border: 1px solid;
+    color: #d8dee4;
+    background-color: #b14e26;
+    height: 60px;
+    width: 650px;
+}
+a {
+    color: #d8dee4;
+}
+
+tr:hover {
+    background-color: #3C896D;
+}
+
+tr {
+    text-align: center;
 }
