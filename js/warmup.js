@@ -89,3 +89,45 @@ console.log(areThereEs(true)); // returns false;
 console.log(areThereEs(['e', 'E'])); // returns false;
 console.log(areThereEs()); // returns false;
 
+function fizzBuzz () {
+    for (let i = 0; i < 100; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("fizzBuxx");
+        } else if (i % 3 === 0) {
+            console.log("fizz");
+        } else if (i % 5 === 0) {
+            console.log("buzz")
+        } else {
+            console.log(i)
+        }
+    }
+}
+
+console.log(fizzBuzz());
+
+
+// create a do-while loop that starts at the number 2 and displays the number saured while output is less than 1000000.
+
+let i = 2;
+do {
+    console.log(i);
+    i = i ** 2;
+} while (i ** 2 < 1000000);
+
+console.log(i);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
