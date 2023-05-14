@@ -43,7 +43,7 @@ console.log(findFactors(numberToFactor));
 //     }
 //     return numberOfEs
 // }
-//
+
 // console.log(countEs("Ease")); // returns 2;
 // console.log(countEs("teleconference")); // returns 5;
 // console.log(countEs("TOM")); // returns 0;
@@ -143,11 +143,90 @@ console.log(addEmUp([1,2,3,4,5,6,7,8,9,10])); // returns 55
 console.log(addEmUp([-13, -92, -3500])) // returns -3605
 
 
+// Write a function that takes in a string and returns an object describing the string. The object should have a string property that contains the original string, a numberOfEs property that contains a count of the number of e's in the string (case-insensitive), and a isEvenLength property that contains a boolean for whether the string's length is even or not.
+
+function explainString() {
+    let properties = string.split(', ');
+    let obj = {};
+
+    properties.forEach(function(property) {
+        let tup = property.split(':');
+        obj[tup[0]] = tup[1];
+    });
+    if (function countEs(input) {
+        if (typeof input !== 'string') {
+            return false
+        }
+        let numberOfEs = 0
+        for (let i = 0; i <= input.length; i++) {
+            if (input[i].toLowerCase() === 'e')
+                numberOfEs++
+        }
+        return numberOfEs
+    });
+
+
+}
+
+// function explainString(str) {
+//     return {
+//         string: str,
+//         numberIfEs: countEs(str),
+//         isEvenLength: str.length % 2 === 0
+//     }
+// }
+//
+// console.log(explainString("cheese") // returns {string: "cheese", numberOfEs: 3, isEvenLength: true}
+// console.log(explainString("dog") // returns {string: "dog", numberOfEs: 0, isEvenLength: false}
 
 
 
+// Write a function that takes in an array of objects and returns an array containing all of the names from the original array.
 
+const hamsters = [
+    {
+        name: "Hamtaro",
+        heightInMM: 86,
+        fur: ['orange', 'white'],
+        gender: "male",
+        dateOfBirth: "August 6"
+    } , {
+        name: "Bijou",
+        heightInMM: 75,
+        fur: ['white'],
+        gender: "female",
+        dateOfBirth: "July 10"
+    } , {
+        name: "Oxnard",
+        heightInMM: 100,
+        fur: ['grey', 'white'],
+        gender: "male",
+        dateOfBirth: "May 3"
+    } , {
+        name: "Boss",
+        heightInMM: 120,
+        fur: ['brown', 'white'],
+        gender: "male",
+        dateOfBirth: "September 21"
+    } , {
+        name: "Snoozer",
+        heightInMM: 85,
+        fur: ['brown', 'white', "pink"],
+        gender: "male",
+        dateOfBirth: "January 14"
+    }
+];
 
+function extractNames(input) {
+    let names = []
+
+    input.forEach(function (arrayItem) {
+        names.push(arrayItem.name)
+    });
+    return names
+}
+
+console.log(extractNames(hamsters)); // returns ["Hamtaro", "Bijou", "Oxnard", "Boss", "Snoozer"];
 
 
 
