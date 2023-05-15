@@ -217,19 +217,32 @@ const hamsters = [
     }
 ];
 
-function extractNames(input) {
-    let names = []
+// function extractNames(input) {
+//     let names = []
+//
+//     input.forEach(function (arrayItem) {
+//         names.push(arrayItem.name)
+//     });
+//     return names
+// }
+//
+// console.log(extractNames(hamsters)); // returns ["Hamtaro", "Bijou", "Oxnard", "Boss", "Snoozer"];
 
-    input.forEach(function (arrayItem) {
-        names.push(arrayItem.name)
+
+function largestHeight (arr) {
+    // need to initialize this as an obj which is why it is "arr[0}" instead of = '[0]'
+    //We initialize to the first hamster in the array
+    let tallestHamster = arr[0];
+
+    arr.forEach(function(hamster) {
+        if(hamster.heightInMM > tallestHamster.heightInMM) {
+            tallestHamster = hamster;
+        }
     });
-    return names
+    return tallestHamster;
 }
 
-console.log(extractNames(hamsters)); // returns ["Hamtaro", "Bijou", "Oxnard", "Boss", "Snoozer"];
-
-
-
-
+console.log(largestHeight(hamsters));
+// console.log(largestHeight(hamsters)); // returns {name: "Boss", heightInMM: 120, fur: ['brown', 'white'], gender: "male", dateOfBirth: "September 21"}
 
 
