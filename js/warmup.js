@@ -246,3 +246,43 @@ console.log(largestHeight(hamsters));
 // console.log(largestHeight(hamsters)); // returns {name: "Boss", heightInMM: 120, fur: ['brown', 'white'], gender: "male", dateOfBirth: "September 21"}
 
 
+// Write a function that takes in an array of objects and returns an array of the objects from the array that only have one fur color.
+
+function singleFurColor(arr) {
+    let plainHamsters = [];
+    arr.forEach(function(hamster) {
+        if (hamster.fur.length === 1) {
+            plainHamsters.push(hamster)
+        }
+        });
+    return plainHamsters;
+}
+
+console.log(singleFurColor(hamsters)); // returns [{name: "Bijou", heightInMM: 75, fur: ['white'], gender: "female", dateOfBirth: "July 10"}];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
