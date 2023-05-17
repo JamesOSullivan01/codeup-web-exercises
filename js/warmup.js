@@ -262,11 +262,35 @@ console.log(singleFurColor(hamsters)); // returns [{name: "Bijou", heightInMM: 7
 
 
 
+// Write a function that takes in an array of objects and returns the object with the most colors in the fur array.
+
+// function mostColorful(arr) {
+//     let mostColorfulHamster = []
+//     arr.forEach(function(hamster) {
+//        if (hamster.fur.length > mostColorfulHamster.length) {
+//            mostColorfulHamster = hamster;
+//        }
+//     });
+//     return mostColorfulHamster;
+// }
+//
+console.log(mostColorful(hamsters)); // returns {name: "Snoozer", heightInMM: 85, fur: ['brown', 'white', "pink"], gender: "male", dateOfBirth: "January 14"};
 
 
+// Davids solution:
+function mostColorful(arr) {
+    //set this to an object
+    let mostColors = {fur: []};
 
+    arr.forEach(function(obj) {
+        if (obj.fur.length > mostColors.fur.length) {
+            mostColors = obj
+        }
+    });
+    return mostColors;
+}
 
-
+console.log(mostColorful(hamsters)); // returns {name: "Snoozer", heightInMM: 85, fur: ['brown', 'white', "pink"], gender: "male", dateOfBirth: "January 14"};
 
 
 
