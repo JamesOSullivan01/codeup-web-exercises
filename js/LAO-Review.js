@@ -68,7 +68,6 @@ function extractNames(input) {
 console.log(extractNames(hamsters)); // returns ["Hamtaro", "Bijou", "Oxnard", "Boss", "Snoozer"];
 
 
-console.log(extractNames(hamsters)); // returns ["Hamtaro", "Bijou", "Oxnard", "Boss", "Snoozer"];
 
 
 // Write a function that takes in two string arguments: the first being the string assessed, and
@@ -135,3 +134,119 @@ function findHeaviestItem(items) {
 }
 
 console.log(findHeaviestItem(cart));
+
+
+
+
+//
+// Write a function that takes in an array of numbers and returns an array of numbers from the
+// original array that were evenly divisible by 13. If a number is not evenly divizible by 13, it
+// should not be returned. If no elements within the array are evenly divisible by 13, the
+// function should return an empty array.
+
+const arr1 = [24, 25, 26, 27, 29];
+const arr2 = [13, 26, 39, 52, 65];
+const arr3 = [0, 1, 2, 3, 4, 5];
+
+function getAllDivisibleByThirteen(inputArr) {
+    let numsDivisibleBy13 = [];
+    for (let i = 0; i < inputArr.length; i++) {
+        //we have to add the first condition of !== 0 or else it will store [0] in my new array
+        if (inputArr[i] !== 0 && inputArr[i] % 13 === 0) {
+            numsDivisibleBy13.push(inputArr[i]);
+        }
+    }
+    if (numsDivisibleBy13.length === 0) {
+        return []; // Return an empty array if no elements were divisible by 13
+    }
+    return numsDivisibleBy13;
+}
+
+console.log(getAllDivisibleByThirteen(arr1));
+console.log(getAllDivisibleByThirteen(arr2));
+console.log(getAllDivisibleByThirteen(arr3));
+
+// 1.  Write a function that takes in a string and returns an object with the following properties:
+//       1. string  which is to be set the to the argument passed into the function.
+//       2. numberOfWords  which is to be set to the number of words within the string.
+//       3. instancesOfE  which to be set to the number of instances of the letter "E" within
+// the argument passed into the function. The count should refelect instances of both
+// uppercase and lowercase "E" (HINT: a previous function maybe useful in achieving
+// this)
+
+
+function reviewString (someString) {
+    let normalizeString = someString.toLowerCase();
+    let arrayOfwords = normalizeString.split(' ')
+    let wordCount = 0
+
+    for (let i = 0; i < arrayOfwords.length; i++) {
+        wordCount++
+        // wordCount.push(arrayOfwords); <-- This is wrong shuld be wordCount++
+        //If I use the push method than the word itself would be added
+    }
+
+    let numberOfEs = []
+
+
+    let newObj =  {
+        stringName: someString,
+        numOfWords: wordCount,
+        numberOfEs: countOccurancesOfLetter(normalizeString, 'e')
+    }
+    return newObj
+}
+
+console.log(reviewString("Dielectric Grease"));
+console.log(reviewString("Street Fighter EX3"));
+
+console.log(reviewString("99"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
