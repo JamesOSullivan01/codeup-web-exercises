@@ -1,0 +1,18 @@
+header .intro {
+    position: relative;
+    border: 1px solid red;
+}
+
+header .intro .head {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+header .intro .head h1 {
+    border: 3px solid red;
+}
+.imgage1 {
+    height: auto;
+    border: 5px solid red;
+}
