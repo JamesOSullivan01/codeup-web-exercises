@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+    // Open Weather
     let latLong = [29.7604, -95.3698];
     $.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${latLong[0]}&lon=${latLong[1]}&units=imperial&appid=${OMW_KEY}`).done(function (data) {
         console.log(data);
@@ -54,9 +56,9 @@ $(document).ready(function () {
             let htmlString = ` Wind Speed: ${wind.speed} MPH <br> Wind Direction: ${wind.deg}&deg;`;
             $(windElements[i]).html(htmlString);
         }
-    }).fail(function () {
-        console.log('Failed to fetch weather data');
     });
+
+
 
     mapboxgl.accessToken = myMapboxKey;
     var map = new mapboxgl.Map({
@@ -66,18 +68,45 @@ $(document).ready(function () {
         center: [-95.473488, 30.315239]
     });
 
-    // Add the control to the map.
+    map.addControl(
+        new mapboxgl.GeolocateControl({
+            positionOptions: {
+                enableHighAccuracy: true
+            },
+            trackUserLocation: true,
+            showUserHeading: true
+        })
+    );
+
+    const marker = new mapboxgl.Marker({
+        draggable: true
+    })
+        .setLngLat([-95.3698, 29.7604])
+        .addTo(map);
+
+    function onDragEnd() {
+        const lngLat = marker.getLngLat();
+        coordinates.style.display = 'block';
+        coordinates.innerHTML = `Longitude: ${lngLat.lng}<br />Latitude: ${lngLat.lat}`;
+    }
+
+    marker.on('dragend', onDragEnd);
+
     const geocoder = new MapboxGeocoder({
         accessToken: mapboxgl.accessToken,
         mapboxgl: mapboxgl
     });
     document.getElementById('map').appendChild(geocoder.onAdd(map));
 
-    // Add event listener to move the map when an address is entered
     geocoder.on('result', function (e) {
         map.flyTo({
             center: e.result.center,
             zoom: 13
         });
     });
+
+
+
+
+
 });
