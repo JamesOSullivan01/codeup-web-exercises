@@ -17,57 +17,25 @@ $(document).ready(function () {
         })
     );
 
-    const geocoder = new MapboxGeocoder({
-        accessToken: mapboxgl.accessToken,
-        mapboxgl: mapboxgl
-    });
-
-    map.addControl(geocoder);
-
     let marker = new mapboxgl.Marker({
         draggable: true
     }).setLngLat([-95.3698, 29.7604])
-        .addTo(map);
+        .addTo(map)
+        map.setCenter([-95.3698, 29.7604]);
 
-    marker.on('click', function () {
-        const lngLat = marker.getLngLat();
 
-        $.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${lngLat.lng},${lngLat.lat}.json`, {
-            access_token: myMapboxKey
-        }).done(function (data) {
-            console.log(data);
-        });
-    });
 
-    // Update weather when marker is moved
-    marker.on('dragend', function () {
-        const lngLat = marker.getLngLat();
-        getWeather(lngLat.lng, lngLat.lat);
-    });
-
-    geocoder.on('result', function (e) {
-        map.flyTo({
-            center: e.result.center,
-            zoom: 13
-        });
-
-        // Update the marker's position
-        marker.setLngLat(e.result.center);
-    });
-
-    // Open Weather
-    let latLong = [29.7604, -95.3698];
-
+    // Function to update weather based on latitude and longitude
     function getWeather(lon, lat) {
         $.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${OMW_KEY}`).done(function (data) {
             console.log(data);
 
             let coordinates = data.city.coord;
-            let lat = coordinates.lat;
-            let lon = coordinates.lon;
+            let latitude = coordinates.lat;
+            let longitude = coordinates.lon;
 
-            console.log('Latitude:', lat);
-            console.log('Longitude:', lon);
+            console.log('Latitude:', latitude);
+            console.log('Longitude:', longitude);
 
             // Date titles of cards
             let dateTitles = $('.title-for-card');
@@ -80,7 +48,7 @@ $(document).ready(function () {
                 $(dateTitles[i]).html(day);
             }
 
-            // Temperate and icons for cards
+            // Temperature and icons for cards
             let temperatureElements = $('.temperature');
 
             for (let i = 0; i < temperatureElements.length; i++) {
@@ -112,9 +80,34 @@ $(document).ready(function () {
                 let htmlString = ` Wind Speed: ${wind.speed} MPH <br> Wind Direction: ${wind.deg}&deg;`;
                 $(windElements[i]).html(htmlString);
             }
-        });
+        })
     }
 
-    // Call the getWeather function with the initial latLong values
-    getWeather(latLong[1], latLong[0]);
+
+    // Update weather when marker is moved
+    marker.on('dragend', function () {
+        const lngLat = marker.getLngLat();
+        getWeather(lngLat.lng, lngLat.lat);
+        map.setCenter([lngLat.lng, lngLat.lat]);
+    });
+
+    // Event listener for the search box
+    $('#search-button').on('click', function () {
+        var searchQuery = $('#search-box').val();
+
+        geocode(searchQuery, myMapboxKey)  // Pass the data variable to the geocode function
+            .then(function (location) {
+                console.log('Location:', location);
+
+                marker.setLngLat(location);
+                map.setCenter(location);
+
+                getWeather(location[0], location[1]);
+            });
+    });
+
+
+    // Call the getWeather function with the initial marker position
+    const initialLngLat = marker.getLngLat();
+    getWeather(initialLngLat.lng, initialLngLat.lat);
 });
