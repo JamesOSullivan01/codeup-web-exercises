@@ -1,0 +1,39 @@
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+    background-color: black; /* Replace #ff0000 with your desired color */
+}
+.carousel-indicators {
+    background-color: black;
+    opacity: 35%;
+}
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+#map {
+    width: 75%;
+    height: 550px;
+    align-self: center;
+}
+
+.carousel.slide {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.carousel-inner,
+.carousel-item,
+.card {
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    #map,
+    .carousel.slide {
+        width: 100%;
+    }
+}
