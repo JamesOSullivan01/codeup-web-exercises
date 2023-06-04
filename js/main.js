@@ -14,4 +14,20 @@ $('#dark-mode-btn').on('click', function(){
 
     // When the cursor hovers over the span with the id of uppercase (<span id="uppercase">), take the text of that span and display it, in lowercase, in the span with the id of lowercase (<span id="lowercase">).
 
+    $('#uppercase').hover(function() {
+        let text = $(this).text();
+        $('#lowercase').text(text.toLowerCase());
+    }, function() {
+        $('#lowercase').empty();
+        });
+
+
+        $( "li" ).hover(
+        function() {
+        $( this ).append( $( "<span> ***</span>" ) );
+    }, function() {
+        $( this ).find( "span" ).last().remove();
+    }
+        );
+
 });
