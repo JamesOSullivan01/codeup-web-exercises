@@ -1,3 +1,30 @@
+:root {
+    --primary-color: #ABAAAA;
+    --secondary-color: #DCDDB6;
+    --accent-color: #c69f4a;
+    --dark-accent: #383637;
+    --dark-green-accent: #2b3535;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--dark-green-accent)
+}
+
+.card,
+.list-group-item {
+    background-color: var(--secondary-color);
+}
+
+#search-box {
+    background-color: var(--secondary-color);
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--dark-accent)
+
+}
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon{
@@ -7,16 +34,26 @@
     background-color: black;
     opacity: 35%;
 }
-@media only screen and (max-width: 768px) {
-    .container {
-        width: 100%;
-        padding-left: 0;
-        padding-right: 0;
+@media (min-width: 10px) and (max-width: 768px) {
+
+    .carousel-top {
+        width: 450px
+    }
+    .map-container {
+        margin: auto;
+    }
+    .card {
+        width: 300px;
     }
 }
 #map {
     width: 75%;
     height: 550px;
+    align-self: center;
+}
+
+#search-box {
+    width: 30%;
     align-self: center;
 }
 

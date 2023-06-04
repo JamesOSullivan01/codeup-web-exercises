@@ -27,11 +27,11 @@
 <hr class="mb-5">
 
 
-<div class="container mt-3">
+<div class="container mt-3 carousel-top">
     <div class="row justify-content-center">
         <div class="row w-50">
             <div class="col-md-12">
-                <div id="slides-with-indicators" class="carousel slide" data-bs-ride="carousel">
+                <div id="slides-with-indicators" class="carousel slide">
                         <div class="carousel-indicators">
                             <button class="active"
                             type="button"
@@ -143,74 +143,19 @@
     </div>
 </div>
 
-<!--<div class="container">-->
-<!--    <div class="row justify-content-around mb-4">-->
-<!--        <div class="col-4">-->
-<!--            <div class="card text-center my-4">-->
-<!--                <h5 class="card-header date_test title-for-card">Title</h5>-->
-<!--                <p class="card-body mt-3 temperature">some stuff</p>-->
-<!--                <ul class="list-group list-group-flush">-->
-<!--                    <li class="list-group-item description">Sondjkfh jksdh</li>-->
-<!--                    <li class="list-group-item wind"></li>-->
-<!--                    <li class="list-group-item sunInfo"></li>-->
-<!--                </ul>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="col-4">-->
-<!--            <div class="card text-center my-4">-->
-<!--                <h5 class="card-header date_test title-for-card">Title</h5>-->
-<!--                <p class="card-body mt-3 temperature">some stuff</p>-->
-<!--                <ul class="list-group list-group-flush">-->
-<!--                    <li class="list-group-item description">Sondjkfh jksdh</li>-->
-<!--                    <li class="list-group-item wind"></li>-->
-<!--                    <li class="list-group-item sunInfo"></li>-->
-<!--                </ul>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="col-4">-->
-<!--            <div class="card text-center my-4">-->
-<!--                <h5 class="card-header date_test title-for-card">Title</h5>-->
-<!--                <p class="card-body mt-3 temperature">some stuff</p>-->
-<!--                <ul class="list-group list-group-flush">-->
-<!--                    <li class="list-group-item description">Sondjkfh jksdh</li>-->
-<!--                    <li class="list-group-item wind"></li>-->
-<!--                    <li class="list-group-item sunInfo"></li>-->
-<!--                </ul>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="col-4">-->
-<!--            <div class="card text-center my-4">-->
-<!--                <h5 class="card-header date_test title-for-card">Title</h5>-->
-<!--                <p class="card-body mt-3 temperature">some stuff</p>-->
-<!--                <ul class="list-group list-group-flush">-->
-<!--                    <li class="list-group-item description">Sondjkfh jksdh</li>-->
-<!--                    <li class="list-group-item wind"></li>-->
-<!--                    <li class="list-group-item sunInfo"></li>-->
-<!--                </ul>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="col-4">-->
-<!--            <div class="card text-center my-4">-->
-<!--                <h5 class="card-header date_test title-for-card">Title</h5>-->
-<!--                <p class="card-body mt-3 temperature">some stuff</p>-->
-<!--                <ul class="list-group list-group-flush">-->
-<!--                    <li class="list-group-item description">Sondjkfh jksdh</li>-->
-<!--                    <li class="list-group-item wind"></li>-->
-<!--                    <li class="list-group-item sunInfo"></li>-->
-<!--                </ul>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-<div class="container justify-content-center">
-    <div class="row">
-        <input id="search-box" type="text" placeholder="Search location...">
-        <button class="btn-primary" id="search-button">Search</button>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="input-group mb-3">
+                <input id="search-box" type="text" class="form-control" placeholder="Search location...">
+                <button class="btn btn-primary" id="search-button">Search</button>
+            </div>
+        </div>
     </div>
 </div>
 
 
-<div class="container mb-5 w-100" id='map'></div>
+<div class="container mb-5 w-100 map-container d-flex align-self-center" id='map'></div>
 
 <!-- JavaScript files -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

@@ -95,6 +95,7 @@ $(document).ready(function () {
     $('#search-button').on('click', function () {
         var searchQuery = $('#search-box').val();
 
+
         geocode(searchQuery, myMapboxKey)  // Pass the data variable to the geocode function
             .then(function (location) {
                 console.log('Location:', location);
@@ -105,7 +106,6 @@ $(document).ready(function () {
                 getWeather(location[0], location[1]);
             });
     });
-
 
     // Call the getWeather function with the initial marker position
     const initialLngLat = marker.getLngLat();
