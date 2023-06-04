@@ -52,12 +52,16 @@ $('#dark-mode-btn').on('click', function(){
             });
         });
 
+    // When hovering over the divs within the div with a class of hidden-letters, a letter will become visible in a span within the div being hovered over.
 
 
-
-
-
-
-
+    $('.hidden-letters div').hover(
+        function() {
+            $(this).find('span').css('visibility', 'visible');
+        },
+        function() {
+            $(this).find('span').css('visibility', 'hidden');
+        }
+    );
 
 });
