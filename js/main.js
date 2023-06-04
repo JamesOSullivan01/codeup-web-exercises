@@ -21,13 +21,16 @@ $('#dark-mode-btn').on('click', function(){
         $('#lowercase').empty();
         });
 
+    // The span with an id of counter should increment by one every second.
 
-        $( "li" ).hover(
-        function() {
-        $( this ).append( $( "<span> ***</span>" ) );
-    }, function() {
-        $( this ).find( "span" ).last().remove();
-    }
-        );
+//.text returns a string, use parseInt to parse out numbers.
+    let counter = parseInt($('#counter').text());
+
+    setInterval(function() {
+        counter++;
+        $('#counter').text(counter);
+    }, 1000);
+
+
 
 });
