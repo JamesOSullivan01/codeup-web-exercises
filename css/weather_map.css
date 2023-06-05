@@ -28,7 +28,7 @@ body {
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon{
-    background-color: black; /* Replace #ff0000 with your desired color */
+    background-color: black;
 }
 .carousel-indicators {
     background-color: black;
@@ -66,11 +66,4 @@ body {
 .carousel-item,
 .card {
     width: 100%;
-}
-
-@media only screen and (max-width: 768px) {
-    #map,
-    .carousel.slide {
-        width: 100%;
-    }
 }
