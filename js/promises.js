@@ -9,7 +9,8 @@ function getLastCommit(owner, repo) {
     })
         .then((resp) => resp.json())
         .then((data) => {
-            //data is stored in an array and we access the first object of that by using zero and then access the creat-at property
+            //data is stored in an array and we access the first object of that by using zero and then access the created-at property
+            // this only works because the onlly events I have right now are push events. I would have to set up a loop with conditions.
             const created_at = data[0].created_at;
             console.log(`Last github commit for this user was at: ${created_at}.`);
         })
