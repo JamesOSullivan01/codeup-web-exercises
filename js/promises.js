@@ -9,8 +9,8 @@ function getLastCommit(owner, repo) {
     })
         .then((resp) => resp.json())
         .then((data) => {
-            //data is stored in an array and we access the first object of that by using zero and then access the created-at property
-            // this only works because the onlly events I have right now are push events. I would have to set up a loop with conditions.
+            //data is stored in an array, and we access the first object of that by using zero and then access the created-at property
+            // this only works because the only events I have right now are push events. I would have to set up a loop with conditions if I had different types of events.
             const created_at = data[0].created_at;
             console.log(`Last github commit for this user was at: ${created_at}.`);
         })
@@ -21,6 +21,13 @@ function getLastCommit(owner, repo) {
 
 getLastCommit('JamesOSullivan01', 'codeup-web-exercises');
 
-// getLastCommit('JamesOSullivan01', 'codeup-web-exercises')
-//     .then(resp => resp.json()).then(data => console.log(data));
 
+
+// Bonus
+const wait = ((milliseconds) => {
+    return new Promise ((resolve, reject) => {
+        setTimeout(() => {
+            resolve(`This will show up in ${milliseconds/1000} second(s).`);
+        }, milliseconds);
+    });
+});
